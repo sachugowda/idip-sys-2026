@@ -43,7 +43,7 @@
       --text-xl: clamp(1.5rem,1.2rem + 1.25vw,2.25rem);
       --text-2xl: clamp(2rem,1.2rem + 2.5vw,3.5rem);
       --text-hero: clamp(2.4rem,1rem + 3.8vw,4.2rem);
-      --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem; --space-12:3rem; --space-16:4rem; --space-20:5rem; --space-24:6rem;
+      --space-1:.25rem; --space-2:.5rem; --space-3:.75rem; --space-4:1rem; --space-5:1.25rem; --space-6:1.5rem; --space-8:2rem; --space-10:2.5rem; --space-12:3rem; --space-16:4rem; --space-20:5rem;
       --content-narrow: 640px; --content-default: 960px; --content-wide: 1200px;
     }
     [data-theme="dark"] {
@@ -65,7 +65,7 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
     /* SKIP LINK */
-    .skip-link{position:absolute;top:-100%;left:var(--space-4);background:var(--color-primary);color:var(--color-text-inverse);padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);font-size:var(--text-sm);font-weight:600;text-decoration:none;z-index:1000;}
+    .skip-link{position:absolute;top:-100%;left:var(--space-4);background:var(--color-primary);color:var(--color-text-inverse);padding:var(--space-2) var(--space-4);border-radius:var(--radius-md);}
     .skip-link:focus{top:var(--space-2);}
 
     /* NAV */
@@ -88,7 +88,7 @@
     .hero::after{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(200,150,12,.15) 0%,transparent 65%);pointer-events:none;}
     .hero-inner{max-width:var(--content-wide);margin:0 auto;position:relative;display:grid;grid-template-columns:1fr 300px;gap:var(--space-12);align-items:start;}
     .hero-top{display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-6);}
-    .badge{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:var(--text-xs);font-weight:600;letter-spacing:.05em;padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);}
+    .badge{display:inline-flex;align-items:center;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.9);font-size:var(--text-xs);font-weight:600;letter-spacing:.05em;padding:var(--space-2) var(--space-4);border-radius:var(--radius-full);}
     .badge-gold{background:rgba(200,150,12,.22);border-color:rgba(200,150,12,.45);color:#f5d888;}
     h1.hero-title{font-family:var(--font-display);font-size:var(--text-hero);font-weight:400;color:#fff;margin-bottom:var(--space-2);line-height:1.08;}
     .hero-acronym{font-family:var(--font-display);font-size:var(--text-xl);color:#f5d888;font-style:italic;margin-bottom:var(--space-5);}
@@ -98,7 +98,7 @@
     .btn-gold:hover{background:var(--color-accent-hover);}
     .btn-outline{display:inline-flex;align-items:center;gap:var(--space-2);background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;font-weight:600;font-size:var(--text-sm);padding:var(--space-3) var(--space-6);border-radius:var(--radius-full);text-decoration:none;}
     .btn-outline:hover{background:rgba(255,255,255,.18);}
-    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-xl);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-5);}
+    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:var(--radius-xl);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-5);backdrop-filter:blur(8px);}
     .hc-item{display:flex;align-items:flex-start;gap:var(--space-3);}
     .hc-icon{width:34px;height:34px;background:rgba(200,150,12,.22);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:#f5d888;flex-shrink:0;}
     .hc-label{font-size:var(--text-xs);font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.5);}
@@ -146,7 +146,7 @@
     /* AUDIENCE */
     .audience-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--space-4);margin-top:var(--space-6);}
     .aud-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);box-shadow:var(--shadow-sm);}
-    .aud-icon{width:36px;height:36px;background:var(--color-primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-primary);margin-bottom:var(--space-3);}
+    .aud-icon{width:36px;height:36px;background:var(--color-primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-primary);margin-bottom:var(--space-2);flex-shrink:0;}
     .aud-title{font-size:var(--text-sm);font-weight:700;color:var(--color-text);margin-bottom:var(--space-1);}
     .aud-desc{font-size:var(--text-xs);color:var(--color-text-muted);line-height:1.6;}
 
@@ -172,10 +172,10 @@
     .sub-card h3{font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:var(--space-6);color:var(--color-text);}
     .steps{display:flex;flex-direction:column;gap:var(--space-5);}
     .step{display:flex;gap:var(--space-4);align-items:flex-start;}
-    .step-n{width:28px;height:28px;background:var(--color-primary);color:var(--color-text-inverse);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;font-size:var(--text-xs);font-weight:700;flex-shrink:0;}
+    .step-n{width:28px;height:28px;background:var(--color-primary);color:var(--color-text-inverse);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;font-size:var(--text-sm);font-weight:700;flex-shrink:0;}
     .step-body strong{display:block;font-size:var(--text-sm);font-weight:700;color:var(--color-text);margin-bottom:2px;}
     .step-body span{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;}
-    .edas-btn{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-primary);color:var(--color-text-inverse);font-weight:700;font-size:var(--text-sm);padding:var(--space-3) var(--space-6);border-radius:var(--radius-full);text-decoration:none;margin-top:var(--space-6);}
+    .edas-btn{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-primary);color:var(--color-text-inverse);font-weight:700;font-size:var(--text-sm);padding:var(--space-3) var(--space-6);border-radius:var(--radius-full);text-decoration:none;margin-top:var(--space-4);}
     .edas-btn:hover{background:var(--color-primary-hover);}
     .ieee-note{margin-top:var(--space-5);padding:var(--space-4) var(--space-5);background:var(--color-accent-light);border-radius:var(--radius-lg);border-left:3px solid var(--color-accent);}
     .ieee-note p{font-size:var(--text-sm);color:var(--color-text-muted);}
@@ -190,7 +190,7 @@
     /* ORGANIZERS */
     .org-bg{background:var(--color-surface);}
     .org-cat{margin-bottom:var(--space-10);}
-    .org-cat-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:var(--space-5);padding-bottom:var(--space-3);border-bottom:1px solid var(--color-divider);}
+    .org-cat-label{font-size:var(--text-xs);font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--color-text-faint);margin-bottom:var(--space-5);padding-bottom:var(--space-3);border-bottom:1px solid var(--color-border);}
     .org-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-4);}
     .org-card{background:var(--color-bg);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5);}
     .org-card-name{font-size:var(--text-sm);font-weight:700;color:var(--color-text);margin-bottom:var(--space-1);}
@@ -213,14 +213,14 @@
     .vd-icon{width:34px;height:34px;background:rgba(255,255,255,.1);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .vd-text strong{display:block;font-size:var(--text-sm);font-weight:700;color:#fff;}
     .vd-text span{font-size:var(--text-sm);color:rgba(255,255,255,.7);}
-    .venue-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-xl);padding:var(--space-8);text-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--space-4);}
+    .venue-box{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-xl);padding:var(--space-8);text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:var(--space-4);}
     .venue-box-name{font-family:var(--font-display);font-size:var(--text-lg);color:#f5d888;}
     .venue-box-sub{font-size:var(--text-sm);color:rgba(255,255,255,.6);line-height:1.6;}
 
     /* CTA */
     .cta-section{padding:clamp(var(--space-16),10vw,var(--space-24)) var(--space-6);text-align:center;}
     .cta-inner{max-width:var(--content-narrow);margin:0 auto;}
-    .deadline-pill{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-accent-light);border:1px solid rgba(200,150,12,.3);border-radius:var(--radius-full);padding:var(--space-2) var(--space-5);font-size:var(--text-sm);font-weight:700;color:var(--color-accent-dark);margin-bottom:var(--space-6);}
+    .deadline-pill{display:inline-flex;align-items:center;gap:var(--space-2);background:var(--color-accent-light);border:1px solid rgba(200,150,12,.3);border-radius:var(--radius-full);padding:var(--space-2) var(--space-5);font-size:var(--text-xs);font-weight:700;color:var(--color-accent-dark);margin-bottom:var(--space-4);}
     .cta-heading{font-family:var(--font-display);font-size:var(--text-2xl);color:var(--color-text);margin-bottom:var(--space-4);}
     .cta-sub{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.7;max-width:52ch;margin:0 auto var(--space-8);}
     .cta-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:var(--space-3);}
@@ -290,7 +290,7 @@
       <button class="theme-btn" data-theme-toggle aria-label="Switch to dark mode">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <a href="https://edas2026.ieee-ants.org/cfp/all-papers" target="_blank" rel="noopener noreferrer" class="nav-cta">Submit Paper</a>
+      <a href="https://edas.info/login.php?rurl=aHR0cHM6Ly9lZGFzLmluZm8vTjM1MTU1P2M9MzUxNTU%3D" target="_blank" rel="noopener noreferrer" class="nav-cta">Submit Paper</a>
     </div>
   </div>
 </nav>
@@ -309,9 +309,9 @@
       <div class="badge badge-gold" style="margin-bottom:var(--space-5);display:inline-flex;">📄 Call for Papers Open</div>
       <h1 class="hero-title">Intelligent Distributed<br>Information Processing<br>Systems</h1>
       <div class="hero-acronym">(IDIP-Sys)</div>
-      <p class="hero-desc">A full-day workshop at IEEE ANTS 2026 bringing together researchers and practitioners to advance communication-efficient, intelligent, and adaptive distributed systems — from Edge AI and federated learning to 6G and large-scale cyber-physical systems.</p>
+      <p class="hero-desc">A full-day workshop at IEEE ANTS 2026 bringing together researchers and practitioners to advance communication-efficient, intelligent, and adaptive distributed systems for next-generation computing.</p>
       <div class="hero-actions">
-        <a href="https://edas2026.ieee-ants.org/cfp/all-papers" target="_blank" rel="noopener noreferrer" class="btn-gold">Submit Paper via EDAS →</a>
+        <a href="https://edas.info/login.php?rurl=aHR0cHM6Ly9lZGFzLmluZm8vTjM1MTU1P2M9MzUxNTU%3D" target="_blank" rel="noopener noreferrer" class="btn-gold">Submit Paper via EDAS →</a>
         <a href="#about" class="btn-outline">Learn More</a>
       </div>
     </div>
@@ -364,9 +364,9 @@
       <div class="about-body">
         <div class="sec-label">About the Workshop</div>
         <h2 class="sec-heading">Communication-Efficient Intelligence for Distributed Systems</h2>
-        <p>The rapid growth of interconnected devices, edge computing platforms, Internet of Things (IoT) ecosystems, and data-intensive applications has created an urgent need for communication-efficient intelligent distributed information processing systems. Modern distributed environments generate heterogeneous data for processing collaboratively across geographically dispersed nodes under constraints of bandwidth, latency, energy consumption, and security.</p>
-        <p>The workshop focuses on communication-efficient frameworks that integrate artificial intelligence, distributed computing, edge intelligence, and adaptive networking techniques to optimize information exchange among distributed entities. Scope includes lightweight communication protocols, intelligent resource allocation strategies, agent systems, federated and decentralized learning mechanisms, distributed data fusion models, knowledge graphs, and digital twins with distributed intelligence.</p>
-        <p>The workshop will deliberate upon critical challenges such as dynamic network conditions, heterogeneous device capabilities, fault tolerance, energy-aware processing, and secure collaborative intelligence. The deliberations are expected to contribute towards novel algorithms, architectures, and optimization strategies that advance the state of the art in intelligent distributed systems aligned with Edge AI, 6G networks, and large-scale cyber-physical systems.</p>
+        <p>The rapid growth of interconnected devices, edge computing platforms, Internet of Things (IoT) ecosystems, and data-intensive applications has created an urgent need for communication-efficient intelligent systems that can operate effectively under bandwidth, power, and latency constraints.</p>
+        <p>The workshop focuses on communication-efficient frameworks that integrate artificial intelligence, distributed computing, edge intelligence, and adaptive networking techniques to optimize performance across diverse environments.</p>
+        <p>The workshop will deliberate upon critical challenges such as dynamic network conditions, heterogeneous device capabilities, fault tolerance, energy-aware processing, and secure collaborative intelligence in next-generation computing systems.</p>
       </div>
       <div class="info-card">
         <h3 class="info-card-title">Why This Workshop?</h3>
@@ -384,7 +384,7 @@
             <div class="motiv-text"><strong>Privacy-Preserving Computation</strong><span>Communication-efficient distributed intelligence limiting unnecessary raw data transmission.</span></div>
           </div>
           <div class="motiv-item">
-            <div class="motiv-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+            <div class="motiv-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
             <div class="motiv-text"><strong>Next-Generation 6G Wireless Networks</strong><span>Enhancing reliability and efficiency across highly dynamic, next-gen wireless edge networks.</span></div>
           </div>
         </div>
@@ -401,21 +401,21 @@
       <h2 class="sec-heading">Topics of Interest (but not limited to)</h2>
       <p class="sec-lead">IDIP-Sys welcomes original research contributions spanning the following areas of intelligent distributed information processing:</p>
       <div class="topics-grid">
-        <div class="topic-card"><div class="topic-num">01</div><div class="topic-content"><strong>Distributed AI &amp; Multi-Agent Systems</strong><span>Federated optimization, non-IID data challenges, edge-device personalization, secure aggregation, differential privacy</span></div></div>
-        <div class="topic-card"><div class="topic-num">02</div><div class="topic-content"><strong>Cooperative Multi-Agent Decision Systems</strong><span>Consensus algorithms, distributed reinforcement learning, agent communication protocols</span></div></div>
-        <div class="topic-card"><div class="topic-num">03</div><div class="topic-content"><strong>Swarm Intelligence in Distributed Networks</strong><span>Bio-inspired optimization, collective behavior, self-organizing distributed systems</span></div></div>
-        <div class="topic-card"><div class="topic-num">04</div><div class="topic-content"><strong>Intelligent Edge Computing for IoT</strong><span>Edge-cloud task allocation, real-time analytics, latency-aware scheduling, TinyML deployment</span></div></div>
-        <div class="topic-card"><div class="topic-num">05</div><div class="topic-content"><strong>Distributed Sensor Fusion Systems</strong><span>Data fusion algorithms, fault tolerance, real-time synchronization, probabilistic inference</span></div></div>
-        <div class="topic-card"><div class="topic-num">06</div><div class="topic-content"><strong>Knowledge Graphs in Distributed Info Systems</strong><span>Distributed graph databases, semantic interoperability, graph neural networks</span></div></div>
-        <div class="topic-card"><div class="topic-num">07</div><div class="topic-content"><strong>Blockchain-Based Intelligent Distributed Systems</strong><span>Smart contracts for automation, distributed identity management, blockchain for IoT trust</span></div></div>
-        <div class="topic-card"><div class="topic-num">08</div><div class="topic-content"><strong>Trustworthy AI in Distributed Environments</strong><span>Cybersecurity in distributed AI, Byzantine faults, adversarial robustness, ethical decision-making</span></div></div>
-        <div class="topic-card"><div class="topic-num">09</div><div class="topic-content"><strong>Knowledge Distillation &amp; Model Compression</strong><span>Structured/unstructured pruning, neural architecture search, on-device fine-tuning</span></div></div>
-        <div class="topic-card"><div class="topic-num">10</div><div class="topic-content"><strong>Foundation Models in Federated Environments</strong><span>Parameter-efficient fine-tuning, communication-efficient adaptation, heterogeneous client participation</span></div></div>
-        <div class="topic-card"><div class="topic-num">11</div><div class="topic-content"><strong>Distributed Multi-Modal AI Systems</strong><span>Cross-modal learning, multi-modal federated learning, asynchronous multi-modal aggregation</span></div></div>
-        <div class="topic-card"><div class="topic-num">12</div><div class="topic-content"><strong>Digital Twins with Distributed Intelligence</strong><span>Real-time physical–digital synchronization, digital twin orchestration in 5G/6G networks</span></div></div>
-        <div class="topic-card"><div class="topic-num">13</div><div class="topic-content"><strong>Agentic AI &amp; LLM Orchestration at the Edge</strong><span>Large language model inference at edge, autonomous agents in distributed settings</span></div></div>
-        <div class="topic-card"><div class="topic-num">14</div><div class="topic-content"><strong>Sustainable &amp; Energy-Aware Distributed AI</strong><span>Green computing, carbon-aware scheduling, energy-efficient distributed inference</span></div></div>
-        <div class="topic-card"><div class="topic-num">15</div><div class="topic-content"><strong>Testbeds &amp; Real-World Deployments</strong><span>Experimental systems, open datasets, reproducible benchmarks for distributed AI</span></div></div>
+        <div class="topic-card"><div class="topic-num">01</div><div class="topic-content"><strong>Distributed AI &amp; Multi-Agent Systems</strong><span>Federated optimization, non-IID data challenges, decentralized training</span></div></div>
+        <div class="topic-card"><div class="topic-num">02</div><div class="topic-content"><strong>Cooperative Multi-Agent Decision Systems</strong><span>Consensus algorithms, distributed reinforcement learning</span></div></div>
+        <div class="topic-card"><div class="topic-num">03</div><div class="topic-content"><strong>Swarm Intelligence in Distributed Networks</strong><span>Bio-inspired optimization, collective behavior, swarm robotics</span></div></div>
+        <div class="topic-card"><div class="topic-num">04</div><div class="topic-content"><strong>Intelligent Edge Computing for IoT</strong><span>Edge-cloud task allocation, real-time analytics, network optimization</span></div></div>
+        <div class="topic-card"><div class="topic-num">05</div><div class="topic-content"><strong>Distributed Sensor Fusion Systems</strong><span>Data fusion algorithms, fault tolerance, real-time inference</span></div></div>
+        <div class="topic-card"><div class="topic-num">06</div><div class="topic-content"><strong>Knowledge Graphs in Distributed Info Systems</strong><span>Distributed graph databases, semantic intelligence, linked data</span></div></div>
+        <div class="topic-card"><div class="topic-num">07</div><div class="topic-content"><strong>Blockchain-Based Intelligent Distributed Systems</strong><span>Smart contracts for automation, distributed ledger systems</span></div></div>
+        <div class="topic-card"><div class="topic-num">08</div><div class="topic-content"><strong>Trustworthy AI in Distributed Environments</strong><span>Cybersecurity in distributed AI, Byzantine resilience</span></div></div>
+        <div class="topic-card"><div class="topic-num">09</div><div class="topic-content"><strong>Knowledge Distillation &amp; Model Compression</strong><span>Structured/unstructured pruning, neural architecture search</span></div></div>
+        <div class="topic-card"><div class="topic-num">10</div><div class="topic-content"><strong>Foundation Models in Federated Environments</strong><span>Parameter-efficient fine-tuning, communication efficiency</span></div></div>
+        <div class="topic-card"><div class="topic-num">11</div><div class="topic-content"><strong>Distributed Multi-Modal AI Systems</strong><span>Cross-modal learning, multi-modal federated learning</span></div></div>
+        <div class="topic-card"><div class="topic-num">12</div><div class="topic-content"><strong>Digital Twins with Distributed Intelligence</strong><span>Real-time physical–digital synchronization, predictive analytics</span></div></div>
+        <div class="topic-card"><div class="topic-num">13</div><div class="topic-content"><strong>Agentic AI &amp; LLM Orchestration at the Edge</strong><span>Large language model inference at edge, agent coordination</span></div></div>
+        <div class="topic-card"><div class="topic-num">14</div><div class="topic-content"><strong>Sustainable &amp; Energy-Aware Distributed AI</strong><span>Green computing, carbon-aware scheduling, efficiency metrics</span></div></div>
+        <div class="topic-card"><div class="topic-num">15</div><div class="topic-content"><strong>Testbeds &amp; Real-World Deployments</strong><span>Experimental systems, open datasets, reproducibility frameworks</span></div></div>
       </div>
     </div>
   </div>
@@ -426,10 +426,10 @@
   <div class="sec-inner reveal">
     <div class="sec-label">Who Should Attend</div>
     <h2 class="sec-heading">Target Audience</h2>
-    <p class="sec-lead">Through keynote lectures, panel discussions, and paper presentations, the workshop aims to foster innovation, collaborative research, and global engagement in intelligent distributed information processing technologies.</p>
+    <p class="sec-lead">Through keynote lectures, panel discussions, and paper presentations, the workshop aims to foster innovation, collaborative research, and global engagement in intelligent distributed information processing.</p>
     <div class="audience-grid">
       <div class="aud-card">
-        <div class="aud-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="aud-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
         <div class="aud-title">Faculty &amp; Researchers</div>
         <div class="aud-desc">Working in distributed systems, AI, edge computing, IoT, federated learning, cybersecurity, and communication networks.</div>
       </div>
@@ -449,7 +449,7 @@
         <div class="aud-desc">Entrepreneurs exploring scalable intelligent and distributed AI applications for next-generation ecosystems.</div>
       </div>
       <div class="aud-card">
-        <div class="aud-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div>
+        <div class="aud-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
         <div class="aud-title">International Collaborators</div>
         <div class="aud-desc">Academic partners seeking interdisciplinary research cooperation and project development opportunities.</div>
       </div>
@@ -494,7 +494,7 @@
       </div>
       <div class="prog-row keynote">
         <div class="prog-time">4:25 – 5:30 PM</div>
-        <div class="prog-detail"><div class="prog-title">Panel Discussion &amp; Project Development</div><div class="prog-note">Open forum on future directions, collaborative opportunities, and research roadmaps</div></div>
+        <div class="prog-detail"><div class="prog-title">Panel Discussion &amp; Project Development</div><div class="prog-note">Open forum on future directions, collaborative opportunities, and research synergies</div></div>
       </div>
     </div>
   </div>
@@ -524,7 +524,7 @@
             <div class="step-body"><strong>Camera Ready Submission</strong><span>Accepted papers must be revised per reviewer comments and camera-ready copy submitted by 7 November 2026.</span></div>
           </div>
         </div>
-        <a href="https://edas2026.ieee-ants.org/cfp/all-papers" target="_blank" rel="noopener noreferrer" class="edas-btn">Submit via EDAS →</a>
+        <a href="https://edas.info/login.php?rurl=aHR0cHM6Ly9lZGFzLmluZm8vTjM1MTU1P2M9MzUxNTU%3D" target="_blank" rel="noopener noreferrer" class="edas-btn">Submit via EDAS →</a>
         <div class="ieee-note">
           <p><strong>IEEE Xplore Publication:</strong> Accepted and presented papers will be published in IEEE ANTS 2026 proceedings and indexed in the IEEE Xplore digital library.</p>
         </div>
@@ -532,7 +532,7 @@
       <div>
         <div class="sec-label">Submission Guidelines</div>
         <h2 class="sec-heading">Paper Submission</h2>
-        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.75;margin-bottom:var(--space-6);">Papers for the IDIP-Sys workshop must be submitted via the EDAS submission link and must conform to IEEE conference formatting guidelines. Details and guidelines are available at the IEEE ANTS 2026 website.</p>
+        <p style="font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.75;margin-bottom:var(--space-6);">Papers for the IDIP-Sys workshop must be submitted via the EDAS submission system. Ensure your manuscript follows IEEE conference formatting standards and includes original, previously unpublished research.</p>
         <div class="info-table">
           <div class="info-row"><span class="info-key">Format</span><span class="info-val">IEEE Conference Template</span></div>
           <div class="info-row"><span class="info-key">Platform</span><span class="info-val">EDAS Submission System</span></div>
@@ -562,7 +562,7 @@
           <div class="org-card-inst">ABV Indian Institute of Information Technology &amp; Management, Gwalior, India</div>
           <a href="mailto:kkpatnaik@iiitm.ac.in" class="org-card-email">kkpatnaik@iiitm.ac.in</a>
           <button class="bio-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide bio':'Read bio'">Read bio</button>
-          <div class="bio-text">Kiran Kumar Pattanaik is a distinguished Professor in the Department of Information Technology at ABV-IIITM Gwalior. His research interests include distributed computing, wireless sensor networks, edge computing, Industrial IoT, and intelligent communication systems. A Senior Member of IEEE and Associate Editor of IEEE Internet of Things Journal, he is also Vice-Chair of IEEE Systems Council (MP &amp; CG) since 2023.</div>
+          <div class="bio-text">Kiran Kumar Pattanaik is a distinguished Professor in the Department of Information Technology at ABV-IIITM Gwalior. His research interests include distributed computing, distributed AI, and federated learning systems.</div>
         </div>
 
         <div class="org-card">
@@ -570,7 +570,7 @@
           <div class="org-card-inst">University of Bologna, Italy</div>
           <a href="mailto:paolo.bellavista@unibo.it" class="org-card-email">paolo.bellavista@unibo.it</a>
           <button class="bio-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide bio':'Read bio'">Read bio</button>
-          <div class="bio-text">Full Professor of Distributed and Mobile Systems at the University of Bologna. Author of 300+ publications in IEEE, ACM, and Elsevier. Senior Member of IEEE and ACM. Currently serves as Associate EiC for IEEE Communications Surveys &amp; Tutorials, EB member for ACM Computing Surveys, and EiC for MDPI Computers Journal.</div>
+          <div class="bio-text">Full Professor of Distributed and Mobile Systems at the University of Bologna. Author of 300+ publications in IEEE, ACM, and Elsevier. Senior Member of IEEE and ACM.</div>
         </div>
 
         <div class="org-card">
@@ -578,7 +578,7 @@
           <div class="org-card-inst">Munster Technological University, Ireland</div>
           <a href="mailto:Sourabh.bharti@mtu.ie" class="org-card-email">Sourabh.bharti@mtu.ie</a>
           <button class="bio-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide bio':'Read bio'">Read bio</button>
-          <div class="bio-text">Researcher and lecturer at NIMBUS Research Centre, MTU Ireland. Expertise in edge computing, federated learning, distributed machine learning, IoT, and intelligent networked systems. Works on privacy-aware and communication-efficient AI frameworks for industrial and cyber-physical applications.</div>
+          <div class="bio-text">Researcher and lecturer at NIMBUS Research Centre, MTU Ireland. Expertise in edge computing, federated learning, distributed machine learning, IoT, and intelligent systems.</div>
         </div>
 
       </div>
@@ -618,7 +618,7 @@
     <div>
       <div class="venue-label">Co-Located With</div>
       <h2 class="venue-heading">IEEE <em>ANTS 2026</em></h2>
-      <p class="venue-desc">IEEE International Conference on Advanced Networks and Telecommunications Systems — one of Asia's premier networking conferences, bringing together researchers and practitioners from around the world.</p>
+      <p class="venue-desc">IEEE International Conference on Advanced Networks and Telecommunications Systems — one of Asia's premier networking conferences, bringing together researchers and professionals in communications and networks.</p>
       <div class="venue-details">
         <div class="vd">
           <div class="vd-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
@@ -654,7 +654,7 @@
     <h2 class="cta-heading">Ready to Contribute?</h2>
     <p class="cta-sub">Submit your original research on intelligent distributed systems, federated learning, edge AI, digital twins, and distributed computing to IDIP-Sys 2026 at IEEE ANTS, IIT Roorkee.</p>
     <div class="cta-btns">
-      <a href="https://edas2026.ieee-ants.org/cfp/all-papers" target="_blank" rel="noopener noreferrer" class="btn-primary-lg">Submit Paper via EDAS →</a>
+      <a href="https://edas.info/login.php?rurl=aHR0cHM6Ly9lZGFzLmluZm8vTjM1MTU1P2M9MzUxNTU%3D" target="_blank" rel="noopener noreferrer" class="btn-primary-lg">Submit Paper via EDAS →</a>
       <a href="mailto:kkpatnaik@iiitm.ac.in" class="btn-sec-lg">Contact Organizers</a>
     </div>
   </div>
