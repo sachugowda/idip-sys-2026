@@ -124,16 +124,27 @@
     .sec-lead{font-size:var(--text-base);color:var(--color-text-muted);max-width:65ch;line-height:1.75;margin-bottom:var(--space-8);}
 
     /* ABOUT */
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:start;}
-    .about-body p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.75;margin-bottom:var(--space-4);}
-    .about-body p:last-child{margin-bottom:0;}
-    .info-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-md);}
-    .info-card-title{font-family:var(--font-display);font-size:var(--text-lg);margin-bottom:var(--space-6);color:var(--color-text);}
-    .motiv-list{display:flex;flex-direction:column;gap:var(--space-5);}
-    .motiv-item{display:flex;gap:var(--space-4);align-items:flex-start;}
-    .motiv-icon{width:34px;height:34px;background:var(--color-primary-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;}
-    .motiv-text strong{display:block;font-size:var(--text-sm);font-weight:700;color:var(--color-text);margin-bottom:2px;}
-    .motiv-text span{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.6;}
+    .about-section{background:var(--color-surface);}
+    .about-content{max-width:var(--content-wide);margin:0 auto;padding:clamp(var(--space-12),7vw,var(--space-20)) var(--space-6);}
+    .about-header{margin-bottom:var(--space-10);}
+    .about-header .sec-label{margin-bottom:var(--space-3);}
+    .about-header h2{font-family:var(--font-display);font-size:var(--text-2xl);font-weight:400;color:var(--color-text);margin-bottom:var(--space-6);}
+    .about-body{display:flex;flex-direction:column;gap:var(--space-6);}
+    .about-body p{font-size:var(--text-base);color:var(--color-text-muted);line-height:1.8;max-width:100%;}
+    .about-body p strong{color:var(--color-text);font-weight:600;}
+
+    /* WHY THIS WORKSHOP */
+    .why-workshop-bg{background:var(--color-surface-2);}
+    .why-workshop-content{max-width:var(--content-wide);margin:0 auto;padding:clamp(var(--space-12),7vw,var(--space-20)) var(--space-6);}
+    .why-workshop-header{margin-bottom:var(--space-10);}
+    .why-workshop-header .sec-label{margin-bottom:var(--space-3);}
+    .why-workshop-header h2{font-family:var(--font-display);font-size:var(--text-xl);font-weight:400;color:var(--color-text);margin-bottom:var(--space-2);}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:var(--space-6);margin-top:var(--space-8);}
+    .why-card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-8);box-shadow:var(--shadow-md);display:flex;flex-direction:column;gap:var(--space-4);}
+    .why-icon{width:48px;height:48px;background:var(--color-primary-light);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:center;color:var(--color-primary);flex-shrink:0;}
+    .why-icon svg{width:24px;height:24px;}
+    .why-card h3{font-family:var(--font-display);font-size:var(--text-lg);font-weight:400;color:var(--color-text);margin:0;}
+    .why-card p{font-size:var(--text-sm);color:var(--color-text-muted);line-height:1.7;margin:0;}
 
     /* TOPICS */
     .topics-bg{background:var(--color-surface-2);}
@@ -245,7 +256,7 @@
 
     /* RESPONSIVE */
     @media(max-width:900px){
-      .hero-inner,.about-grid,.sub-grid,.venue-inner{grid-template-columns:1fr;}
+      .sub-grid,.venue-inner{grid-template-columns:1fr;}
       .dates-inner{grid-template-columns:1fr 1fr;}
       .di{border-right:none;border-bottom:1px solid rgba(255,255,255,.1);}
       .nav-links{display:none;}
@@ -254,6 +265,7 @@
       .nav-cta{display:none;}
       .dates-inner{grid-template-columns:1fr;}
       .prog-row{grid-template-columns:100px 1fr;}
+      .why-grid{grid-template-columns:1fr;}
     }
   </style>
 </head>
@@ -265,7 +277,6 @@
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo" aria-label="IDIP-Sys 2026 Home">
-      <!-- SVG Logo -->
       <svg width="38" height="38" viewBox="0 0 38 38" fill="none" aria-hidden="true">
         <rect width="38" height="38" rx="9" fill="#1a3a6c"/>
         <rect x="7" y="8" width="11" height="11" rx="2.5" fill="#f5d888"/>
@@ -357,39 +368,52 @@
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <div class="sec-inner">
-    <div class="about-grid reveal">
-      <div class="about-body">
-        <div class="sec-label">About the Workshop</div>
-        <h2 class="sec-heading">Intelligence for Distributed Systems</h2>
-        <p>The rapid growth of interconnected devices, edge computing platforms, Internet of Things (IoT) ecosystems, and data-intensive applications has created an urgent need for communication-efficient intelligent distributed information processing systems. Modern distributed environments generate heterogeneous data for processing collaboratively across geographically dispersed nodes under constraints of bandwidth, latency, energy consumption, and security. The significant demand for intelligent distributed architectures capable of minimizing communication overhead while
-           maintaining high computational accuracy, reliability, and adaptability is the need of hour.</p>
-        <p>The workshop focuses on discussing communication-efficient frameworks that integrate artificial intelligence, distributed computing, edge intelligence, and adaptive networking techniques to optimize information exchange among distributed entities. The scope of the workshop includes topics drawn from but not limited to lightweight communication protocols, intelligent resource allocation strategies, agent systems, federated and decentralized learning mechanisms, distributed data fusion models, knowledge graphs, digital twins with distributed intelligence, etc. The workshop will deliberate upon the critical challenges such as dynamic network conditions, heterogeneous device capabilities, fault tolerance, energy-aware processing, secure collaborative intelligence in the realm of IDIP-Sys.</p>
-        <p>The motivation for this workshop is hooked to the growing reliance on real-time distributed applications in smart healthcare, autonomous transportation, industrial automation, smart grids, environmental monitoring, and next-generation wireless networks. These applications require rapid and reliable decision-making while operating in resource-constrained and highly dynamic environments. Enhancing reliability in communication from the context of application requirements can significantly improve system scalability, response time, operational efficiency, sustainability, and acceptability. Furthermore, communication-efficient distributed intelligence supports privacy-preserving computation by limiting unnecessary raw data transmission.</p>
-        <p>The deliberations in this workshop are expected to contribute towards the development of novel algorithms, architectures, and optimization strategies that advance the state of the art in intelligent distributed systems aligned with emerging technological paradigms such as Edge AI, 6G networks, and large-scale cyber-physical systems.</p>
+<!-- ABOUT THE WORKSHOP - FULL WIDTH -->
+<section class="about-section" id="about">
+  <div class="about-content reveal">
+    <div class="about-header">
+      <div class="sec-label">About the Workshop</div>
+      <h2>Communication-Efficient Intelligence for Distributed Systems</h2>
+    </div>
+    <div class="about-body">
+      <p>The rapid growth of <strong>interconnected devices, edge computing platforms, Internet of Things (IoT) ecosystems, and data-intensive applications</strong> has created an urgent need for communication-efficient intelligent distributed information processing systems. Modern distributed environments generate heterogeneous data for processing collaboratively across geographically dispersed nodes under constraints of <strong>bandwidth, latency, energy consumption, and security</strong>. The significant demand for intelligent distributed architectures capable of <strong>minimizing communication overhead</strong> while maintaining high computational accuracy, reliability, and adaptability is the need of hour.</p>
+      
+      <p>The workshop focuses on discussing <strong>communication-efficient frameworks</strong> that integrate artificial intelligence, distributed computing, edge intelligence, and adaptive networking techniques to optimize information exchange among distributed entities. The scope of the workshop includes topics drawn from but not limited to <strong>lightweight communication protocols, intelligent resource allocation strategies, agent systems, federated and decentralized learning mechanisms, distributed data fusion models, knowledge graphs, digital twins with distributed intelligence</strong>, etc. The workshop will deliberate upon the <strong>critical challenges</strong> such as dynamic network conditions, heterogeneous device capabilities, fault tolerance, energy-aware processing, secure collaborative intelligence in the realm of IDIP-Sys.</p>
+      
+      <p>The motivation for this workshop is hooked to the growing reliance on <strong>real-time distributed applications in smart healthcare, autonomous transportation, industrial automation, smart grids, environmental monitoring, and next-generation wireless networks</strong>. These applications require rapid and reliable decision-making while operating in resource-constrained and highly dynamic environments. Enhancing reliability in communication from the context of application requirements can significantly improve <strong>system scalability, response time, operational efficiency, sustainability, and acceptability</strong>. Furthermore, <strong>communication-efficient distributed intelligence supports privacy-preserving computation</strong> by limiting unnecessary raw data transmission.</p>
+      
+      <p>The deliberations in this workshop are expected to contribute towards the development of <strong>novel algorithms, architectures, and optimization strategies</strong> that advance the state of the art in intelligent distributed systems aligned with emerging technological paradigms such as <strong>Edge AI, 6G networks, and large-scale cyber-physical systems</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY THIS WORKSHOP - FULL WIDTH 4 COLUMNS -->
+<section class="why-workshop-bg">
+  <div class="why-workshop-content reveal">
+    <div class="why-workshop-header">
+      <div class="sec-label">Motivation</div>
+      <h2>Why This Workshop?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Smart Healthcare & Autonomous Transport</h3>
+        <p>Real-time distributed AI enabling critical decision-making in resource-constrained environments.</p>
       </div>
-      <div class="info-card">
-        <h3 class="info-card-title">Why This Workshop?</h3>
-        <div class="motiv-list">
-          <div class="motiv-item">
-            <div class="motiv-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <div class="motiv-text"><strong>Smart Healthcare & Autonomous Transport</strong><span>Real-time distributed AI enabling critical decision-making in resource-constrained environments.</span></div>
-          </div>
-          <div class="motiv-item">
-            <div class="motiv-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
-            <div class="motiv-text"><strong>Industrial Automation & Smart Grids</strong><span>Large-scale cyber-physical systems requiring adaptive intelligent network control and monitoring.</span></div>
-          </div>
-          <div class="motiv-item">
-            <div class="motiv-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <div class="motiv-text"><strong>Privacy-Preserving Computation</strong><span>Communication-efficient distributed intelligence limiting unnecessary raw data transmission.</span></div>
-          </div>
-          <div class="motiv-item">
-            <div class="motiv-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
-            <div class="motiv-text"><strong>Next-Generation 6G Wireless Networks</strong><span>Enhancing reliability and efficiency across highly dynamic, next-gen wireless edge networks.</span></div>
-          </div>
-        </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Industrial Automation & Smart Grids</h3>
+        <p>Large-scale cyber-physical systems requiring adaptive intelligent network control and monitoring.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Privacy-Preserving Computation</h3>
+        <p>Communication-efficient distributed intelligence limiting unnecessary raw data transmission.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20"/></svg></div>
+        <h3>Next-Generation 6G Wireless Networks</h3>
+        <p>Enhancing reliability and efficiency across highly dynamic, next-gen wireless edge networks.</p>
       </div>
     </div>
   </div>
@@ -558,7 +582,6 @@
     <div class="org-cat">
       <div class="org-cat-label">Technical Program Committee Chairs</div>
       <div class="org-grid">
-
         <div class="org-card">
           <div class="org-card-name">K. K. Pattanaik <span style="font-size:var(--text-xs);font-weight:400;color:var(--color-primary)">(Main Contact)</span></div>
           <div class="org-card-inst">ABV Indian Institute of Information Technology &amp; Management, Gwalior, India</div>
@@ -566,7 +589,6 @@
           <button class="bio-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide bio':'Read bio'">Read bio</button>
           <div class="bio-text">Kiran Kumar Pattanaik is a distinguished Professor in the Department of Information Technology at ABV-IIITM Gwalior. His research interests include distributed computing, distributed AI, and federated learning systems.</div>
         </div>
-
         <div class="org-card">
           <div class="org-card-name">Paolo Bellavista</div>
           <div class="org-card-inst">University of Bologna, Italy</div>
@@ -574,7 +596,6 @@
           <button class="bio-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide bio':'Read bio'">Read bio</button>
           <div class="bio-text">Full Professor of Distributed and Mobile Systems at the University of Bologna. Author of 300+ publications in IEEE, ACM, and Elsevier. Senior Member of IEEE and ACM.</div>
         </div>
-
         <div class="org-card">
           <div class="org-card-name">Sourabh Bharti</div>
           <div class="org-card-inst">Munster Technological University, Ireland</div>
@@ -582,7 +603,6 @@
           <button class="bio-toggle" onclick="this.nextElementSibling.classList.toggle('open');this.textContent=this.nextElementSibling.classList.contains('open')?'Hide bio':'Read bio'">Read bio</button>
           <div class="bio-text">Researcher and lecturer at NIMBUS Research Centre, MTU Ireland. Expertise in edge computing, federated learning, distributed machine learning, IoT, and intelligent systems.</div>
         </div>
-
       </div>
     </div>
 
